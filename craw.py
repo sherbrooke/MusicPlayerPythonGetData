@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import py_mysql
+import Create_DataBase
 
 class Craw:
     def craw(self,url,type):
@@ -42,6 +43,10 @@ class Craw:
 
 
 if __name__ == "__main__":
+
+    database = Create_DataBase.CreateDatabase()
+    database.create()
+
     # 新歌榜
     new_url = 'https://music.163.com/discover/toplist?id=19723756'
     # 热歌榜
