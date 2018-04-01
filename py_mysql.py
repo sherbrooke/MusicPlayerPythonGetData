@@ -3,7 +3,8 @@ import pymysql
 class PyMySQL:
 
     def __init__(self):
-        self.connection = pymysql.connect(host='localhost',port=3306,user='root',password='wangyang123',db='music',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
+        #change this config to yourself's
+        self.connection = pymysql.connect(host='localhost',port=3306,user='root',password='XXXXXXXXX',db='music',charset='utf8mb4',cursorclass=pymysql.cursors.DictCursor)
 
     def insert_new_info(self,id,name,album,album_id,url,artist,duration,pic):
         with self.connection.cursor() as cursor:
