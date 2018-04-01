@@ -2,7 +2,7 @@ import pymysql
 
 class CreateDatabase:
     def create(self):
-        connection = pymysql.connect(host='localhost', port=3306, user='root', password='wangyang123', db='music',
+        connection = pymysql.connect(host='localhost', port=3306, user='root', password='XXXXXX', db='music',
                                           charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
         with connection.cursor() as cursor:
             new_music_sql = '''create table `new_music`(`id` int(11) NOT NULL ,`name` VARCHAR(256) COLLATE utf8_bin NOT NULL ,`album` VARCHAR(256) COLLATE utf8_bin NOT NULL ,
