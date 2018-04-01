@@ -2,6 +2,7 @@ import pymysql
 
 class CreateDatabase:
     def create(self):
+        #change this config to yourself's 
         connection = pymysql.connect(host='localhost', port=3306, user='root', password='XXXXXX', db='music',
                                           charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
         with connection.cursor() as cursor:
